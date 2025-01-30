@@ -9,19 +9,25 @@
 	        for (int i = 0; i < a.length(); i++) {
 	            char currentChar = a.charAt(i);
 	            
-	            if (currentChar == '(' || currentChar == '{' || currentChar == '[') {
+	            if (currentChar == '(' || currentChar == '{' || currentChar == '[') 
+	            {
 	                s.push(currentChar);
-	            } else {
-	                if (s.isEmpty()) {
+	            } else 
+	            {
+	                if (s.isEmpty()) 
+	                {
 	                    return false;  // There is a closing bracket without a corresponding opening bracket.
 	                }
 	                char top = s.pop();
 	                
-	                if (currentChar == ')' && top != '(') {
+	                if (currentChar == ')' && top != '(') 
+	                {
 	                    return false;
-	                } else if (currentChar == '}' && top != '{') {
+	                } else if (currentChar == '}' && top != '{') 
+	                {
 	                    return false;
-	                } else if (currentChar == ']' && top != '[') {
+	                } else if (currentChar == ']' && top != '[') 
+	                {
 	                    return false;
 	                }
 	            }
